@@ -1,3 +1,6 @@
+import HomePage from '@/pagesComponents/HomePage/index'
 export default function Home() {
-  return <main></main>;
+  return <main>
+    <HomePage />
+  </main>;
 }
