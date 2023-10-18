@@ -1,14 +1,18 @@
-.cate_arr{
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.3s linear;
+.cate_arr {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear;
 }
 
-.nav_item:hover  .cate_arr {
-    visibility: visible;
-    opacity: 1;
+.nav_item:hover .cate_arr {
+  visibility: visible;
+  opacity: 1;
 }
-.cate1{
-    background: #ccc;
-    border-radius: 1.5rem;
+.cate1 {
+  background: #ccc;
+  border-radius: 1.5rem;
+}
+nav {
+  background-color: #00000030 !important;
+  backdrop-filter: blur(15px);
 }

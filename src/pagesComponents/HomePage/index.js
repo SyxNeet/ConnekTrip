@@ -1,12 +1,14 @@
-import React from 'react'
-import Banner from './Banner'
+import React from "react";
+import Destination from "./Destination";
+import Banner from "./Banner";
 
 function index() {
   return (
     <div>
-        <Banner />
+      <Banner />
+      <Destination />
     </div>
-  )
+  );
 }
 
-export default index
+export default index;
