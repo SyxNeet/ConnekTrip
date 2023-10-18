@@ -1,0 +1,24 @@
+.custom-pagination {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .custom-pagination li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  
+  .custom-pagination li.active {
+    background-color: #fff;
+    color: #000;
+  }

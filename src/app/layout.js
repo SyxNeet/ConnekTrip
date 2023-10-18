@@ -1,12 +1,17 @@
 import { Suspense } from 'react'
 import './globals.css'
+import '../scss/main.scss'
+import Navbar from '@/components/common/Navbar'
+import Footer from '@/components/common/Footer'
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
         <Suspense>
-          {children}
+          <Navbar />
+            {children}
+          <Footer />
         </Suspense>
       </body>
     </html>
