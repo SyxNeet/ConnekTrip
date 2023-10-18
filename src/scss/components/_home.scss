@@ -1,0 +1,56 @@
+.discoveryAb {
+  background: linear-gradient(180deg, #2e3192 0%, #1bffff 78.4%);
+  position: relative;
+  &::after {
+    content: "";
+    width: 7.215rem;
+    height: 8.49rem;
+    position: absolute;
+    z-index: 10;
+    background: url("../../assets/images/discovery.png");
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 50%;
+    background-size: contain;
+    transform: translate(-50%, -50%) rotate(180deg);
+    transition: all 0.4;
+    @media screen and (max-width: 767px) {
+      width: 3.25rem;
+      height: 3.875rem;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 4.625rem;
+    height: 1px;
+    transform: rotate(-90deg);
+    background: url("../../assets/images/Line-2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.discoveryBlock:hover .discoveryAb::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.menu-mobile {
+  transition: all 0.3s linear;
+  transform: translateX(-100%);
+}
+
+.menu-mobile.active {
+  transform: translateX(0);
+}
+
+.listCate1Mb {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+// top_destination
+
+.top_destination {
+  background: #222;
+}
