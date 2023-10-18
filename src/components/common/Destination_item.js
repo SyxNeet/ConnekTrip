@@ -15,16 +15,16 @@ function Destination_item({ imgHeight, className }) {
   const arrStar = new Array(5).fill(star);
   return (
     <div
-      className={`flex flex-col md:rounded-[1rem] md:px-[1rem] md:py-[1rem] justify-end relative ${className} ${imgHeight}`}
+      className={`flex flex-col rounded-[1rem] md:px-[1rem] md:py-[1rem] justify-end relative ${className} ${imgHeight}`}
     >
       {/* <div className="absolute inset-0 bg_item"></div> */}
       <Image
-        src={data?.img}
+        src={image}
         alt="img"
         priority
         quality={100}
         fill
-        className={`object-cover z-[1] md:rounded-[1rem]`}
+        className={`object-cover z-[1] rounded-[1rem]`}
       />
       <div className="flex md:gap-[0.5rem] md:px-[0.56rem] md:py-[0.56rem] md:rounded-[2rem] mt-[0.7rem] mr-[0.7rem] bg-[#fff] bg-opacity-[0.2] backdrop-blur-4 absolute z-[1] top-0 right-0">
         <span className="md:text-[1rem] tracking-[0.005rem]">
