@@ -1,0 +1,39 @@
+.bg-tour {
+  border-radius: 1.5rem;
+  background: lightgray -162.408px 0px / 242.765% 100%;
+}
+
+.swiper_tour {
+  .swiper-slide:first-child {
+    margin-left: 1.81rem;
+  }
+}
+.item_des_hover {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s linear;
+  position: relative;
+}
+.text_tourDes {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s linear;
+}
+
+.tour_experience {
+  overflow: hidden;
+  & > img {
+    transition: all 0.3s ease;
+  }
+  &:hover > img {
+    transform: scale(1.2);
+  }
+  &:hover > .text_tourDes {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover > .item_des_hover {
+    opacity: 1;
+    visibility: visible;
+  }
+}
