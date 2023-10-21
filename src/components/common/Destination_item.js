@@ -1,9 +1,10 @@
+"use client";
 import React from "react";
 import image from "@/assets/images/destination.png";
 import imgLocation from "@/assets/images/imgLocation.svg";
 import star from "@/assets/images/star.svg";
 import Image from "next/image";
-function Destination_item({ imgHeight, className }) {
+function Destination_item({ imgHeight, className, index }) {
   const data = {
     img: image,
     imgLocation: imgLocation,
@@ -18,14 +19,26 @@ function Destination_item({ imgHeight, className }) {
       className={`flex flex-col rounded-[1rem] md:px-[1rem] md:py-[1rem] justify-end relative ${className} ${imgHeight}`}
     >
       {/* <div className="absolute inset-0 bg_item"></div> */}
-      <Image
-        src={image}
-        alt="img"
-        priority
-        quality={100}
-        fill
-        className={`object-cover z-[1] rounded-[1rem]`}
-      />
+      {index ? (
+        <Image
+          src={image}
+          alt="img"
+          priority
+          quality={100}
+          fill
+          className={`object-cover z-[1] rounded-[1rem]`}
+        />
+      ) : (
+        <Image
+          src={image}
+          alt="img"
+          priority
+          quality={100}
+          fill
+          className={`object-cover z-[1] rounded-[1rem]`}
+        />
+      )}
+
       <div className="flex md:gap-[0.5rem] md:px-[0.56rem] md:py-[0.56rem] md:rounded-[2rem] mt-[0.7rem] mr-[0.7rem] bg-[#fff] bg-opacity-[0.2] backdrop-blur-4 absolute z-[1] top-0 right-0">
         <span className="md:text-[1rem] tracking-[0.005rem]">
           {data?.estimate}

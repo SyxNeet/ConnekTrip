@@ -29,6 +29,14 @@ function SlideTour() {
       estimate: "4.8 / 5",
     },
     {
+      img: slide1,
+      imgLocation: imgLocation,
+      location: "Nghe An, Viet Nam",
+      text: "Hoa Lu ancient capital Ninh Binh ",
+      star: star,
+      estimate: "4.8 / 5",
+    },
+    {
       img: slide2,
       imgLocation: imgLocation,
       location: "Nghe An, Viet Nam",
@@ -37,7 +45,15 @@ function SlideTour() {
       estimate: "4.8 / 5",
     },
     {
-      img: image,
+      img: slide1,
+      imgLocation: imgLocation,
+      location: "Nghe An, Viet Nam",
+      text: "Hoa Lu ancient capital Ninh Binh ",
+      star: star,
+      estimate: "4.8 / 5",
+    },
+    {
+      img: slide2,
       imgLocation: imgLocation,
       location: "Nghe An, Viet Nam",
       text: "Hoa Lu ancient capital Ninh Binh ",
@@ -46,6 +62,14 @@ function SlideTour() {
     },
     {
       img: slide1,
+      imgLocation: imgLocation,
+      location: "Nghe An, Viet Nam",
+      text: "Hoa Lu ancient capital Ninh Binh ",
+      star: star,
+      estimate: "4.8 / 5",
+    },
+    {
+      img: slide2,
       imgLocation: imgLocation,
       location: "Nghe An, Viet Nam",
       text: "Hoa Lu ancient capital Ninh Binh ",
@@ -63,9 +87,9 @@ function SlideTour() {
   };
   return (
     <section className="slide_tour relative h-[100vh]">
-      <div className=" flex items-end w-full h-full md:pl-[50%] md:pt-[15.06rem] md:pb-[4.31rem]">
+      <div className=" flex w-[60%] h-full absolute swiper_des_tour">
         <Swiper
-          slidesPerView={2.4}
+          slidesPerView={3}
           spaceBetween={30}
           onSlideChange={handleSlideChange}
           loop={true}
@@ -74,17 +98,14 @@ function SlideTour() {
               swiperRef.current = swiper;
             }
           }}
-          className="!w-full"
+          className=""
         >
           {data?.map((item, index) => (
             <SwiperSlide key={index}>
-              <Destination_item imgHeight={"md:h-[28.9rem]"} />
+              <Destination_item imgHeight={"md:h-[28.9rem]"} index={index} />
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-      <div className={`${select === 0 ? "" : "banner-popup"}`}>
-        <Image src={data[select]?.img} alt="banner" fill quality={100} />
       </div>
     </section>
   );

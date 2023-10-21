@@ -1,6 +1,7 @@
 .slide_tour {
-  .banner-popup {
-    animation: popupBanner 0.8s linear;
+  .banner-popup,
+  .banner-popup-3 {
+    animation: popupBanner 0.7s linear;
     position: absolute;
     width: 100%;
     height: 100%;
