@@ -3,6 +3,8 @@ import Destination from "./Destination";
 import Banner from "./Banner";
 import Experience from "./Experience";
 import SlideTour from "./SlideTour";
+import CustomerReview from "./CustomerReview";
+import OurBlog from "./OurBlog";
 
 function index() {
   return (
@@ -11,6 +13,8 @@ function index() {
       <Destination />
       <Experience />
       <SlideTour />
+      <CustomerReview />
+      <OurBlog />
     </div>
   );
 }

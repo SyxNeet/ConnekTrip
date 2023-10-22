@@ -62,7 +62,7 @@ function Navbar() {
   };
   return (
     <>
-      <nav className="md:px-[11.25vw] px-[0.94rem] md:pt-[1vw] pt-[0.5rem] items-center flex justify-between fixed z-[10] w-full">
+      <nav className="md:px-[11.25rem] px-[0.94rem] md:py-[1rem] pt-[0.5rem] items-center flex justify-between fixed z-[1000] w-full">
         <svg
           onClick={() => handleOpen(true)}
           xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ function Navbar() {
           {data?.map((nav, index) => (
             <div key={index} className="relative nav_item">
               <div className=" flex items-center gap-[0.25rem]">
-                <span className="text-[#fff] md:text-[1rem] font-semibold tracking-[0.005rem]">
+                <span className="text-[#fff] md:text-[1rem] font-semibold font-mons tracking-[0.005rem]">
                   {nav?.name}
                 </span>
                 {index === 1 || index === 2 || index === 4 ? (
@@ -159,7 +159,7 @@ function Navbar() {
           </defs>
         </svg>
       </nav>
-      <div ref={mbMenuRef} className="fixed inset-0 menu-mobile z-[11]">
+      <div ref={mbMenuRef} className="fixed inset-0 menu-mobile z-[100001]">
         <MenuMobile data={data} handleClose={handleClose} />
       </div>
     </>
