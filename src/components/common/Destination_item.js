@@ -4,15 +4,7 @@ import image from "@/assets/images/destination.png";
 import imgLocation from "@/assets/images/imgLocation.svg";
 import star from "@/assets/images/star.svg";
 import Image from "next/image";
-function Destination_item({ imgHeight, className, index }) {
-  const data = {
-    img: image,
-    imgLocation: imgLocation,
-    location: "Nghe An, Viet Nam",
-    text: "Hoa Lu ancient capital Ninh Binh ",
-    star: star,
-    estimate: "4.8 / 5",
-  };
+function Destination_item({ imgHeight,data, className, index }) {
   const arrStar = new Array(5).fill(star);
   return (
     <div
@@ -21,7 +13,7 @@ function Destination_item({ imgHeight, className, index }) {
       {/* <div className="absolute inset-0 bg_item"></div> */}
       {index ? (
         <Image
-          src={image}
+          src={data?.img}
           alt="img"
           priority
           quality={100}
@@ -30,7 +22,7 @@ function Destination_item({ imgHeight, className, index }) {
         />
       ) : (
         <Image
-          src={image}
+          src={data?.img}
           alt="img"
           priority
           quality={100}
@@ -85,13 +77,13 @@ function Destination_item({ imgHeight, className, index }) {
             </defs>
           </svg>
 
-          <span className="text-[#fff] md:text-[0.875rem] font-[500] tracking-[0.00088rem]">
+          <span className="text-[#fff] md:text-[0.875rem] font-poppin font-[500] tracking-[0.00088rem]">
             {data?.location}
           </span>
         </div>
 
         <div>
-          <span className="text-[#fff] md:text-[1.5rem] font-bold leading-[1.5625rem] tracking-[0.015rem]">
+          <span className="text-[#fff] md:text-[1.5rem] font-poppin font-bold leading-[1.5625rem] tracking-[0.015rem]">
             {data?.text}
           </span>
         </div>

@@ -11,7 +11,7 @@ function TourExperience({ img, text }) {
         fill
         className="object-cover md:h-[43.18rem] md:rounded-[1.5rem]"
       />
-      <p className="items-stretch z-1 absolute text_tourDes whitespace-nowrap text-[#fff] text-center md:text-[1.25rem] w-full font-bold tracking-[0.000188rem] md:px-[4rem]">
+      <p className="items-stretch z-1 absolute text_tourDes font-poppin whitespace-nowrap text-[#fff] text-center md:text-[1.25rem] w-full font-bold tracking-[0.000188rem] md:px-[4rem]">
         {text}
       </p>
       <div className="flex flex-col md:gap-[0.75rem] md:px-[4rem] item_des_hover items-center md:pb-[1.5rem]">
@@ -42,7 +42,7 @@ function TourExperience({ img, text }) {
             fill="white"
           />
         </svg>
-        <p className="items-stretch text-center md:text-[0.875rem] tracking-[0.00219rem] text-[#fff]">
+        <p className="items-stretch text-center md:text-[0.875rem] font-mons tracking-[0.00219rem] text-[#fff]">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat.
         </p>

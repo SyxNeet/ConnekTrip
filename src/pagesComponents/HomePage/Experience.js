@@ -270,7 +270,7 @@ function Experience() {
               // click text-> xanh
               <h3
                 key={index}
-                className={`md:text-[0.875rem]  tracking-[0.00219rem] text-center items-stretch  cursor-pointer ${
+                className={`md:text-[0.875rem]  tracking-[0.00219rem] font-mons text-center items-stretch  cursor-pointer ${
                   index === select ? "text-[#5CC4BB]" : "text-[#fff]"
                 }`}
                 onClick={() => setSelect(index)}
@@ -377,7 +377,7 @@ function Experience() {
             {data[select]?.tours?.map((item, index) => (
               <div
                 key={index}
-                className={`md:w-[calc(100%/${progressLength})] md:h-[0.25rem] ${
+                className={`md:w-[calc(100%/${progressLength ?? 8})] md:h-[0.25rem] ${
                   index === realIndexProgress ? "bg-[#DDB152]" : ""
                 }`}
               ></div>

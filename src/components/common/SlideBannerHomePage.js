@@ -30,21 +30,23 @@ function SlideBannerHomePage(data) {
                 quality={100}
                 className="object-cover z-[-1]"
               />
-              <div className="md:pl-[11.25vw] z-1 relative md:w-[70rem] w-full max-md:px-[0.94rem]">
+              <div className="md:pl-[11.25rem] z-1 relative md:w-[70rem] w-full max-md:px-[0.94rem]">
                 <span
                   data-aos-disabled="true"
                   data-aos-once="true"
                   data-aos="fade-up"
                   data-aos-duration="1000"
-                  className="text-[#fff] md:text-[6.25rem] text-[1.875rem] font-bold leading-[1.24] tracking-[0.0625rem]"
+                  className="text-[#fff] font-poppin md:text-[6.25rem] text-[1.875rem] font-bold leading-[1.24] tracking-[0.0625rem]"
                 >
                   {item?.title}
                 </span>
               </div>
+            <div className="bg-banner z-[1] bottom-[-5%] left-0 right-0 w-full md:h-[14.25rem] h-[4.9375rem]"></div>
+
             </div>
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute z-[1] bottom-[-5%] w-full md:h-[14.25rem] h-[4.9375rem]"
+              className="absolute z-[1] bottom-[-5%] left-0 right-0 w-full md:h-[14.25rem] h-[4.9375rem]"
               width="1600"
               height="228"
               viewBox="0 0 1600 228"
@@ -67,7 +69,7 @@ function SlideBannerHomePage(data) {
                   <stop offset="1" stop-color="#222222" stop-opacity="0" />
                 </linearGradient>
               </defs>
-            </svg>
+            </svg> */}
           </SwiperSlide>
         ))}
       </Swiper>

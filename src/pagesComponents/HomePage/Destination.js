@@ -12,14 +12,15 @@ import union from "@/assets/images/Union.png";
 function Destination() {
   const data = new Array(12).fill(0);
   return (
-    <section className="md:pt-[7rem] top_destination relative pt-[4rem]">
+    <section className="md:py-[7rem] top_destination relative pt-[4rem]">
+      
       <div className="circle-1"></div>
       <div className="circle-1"></div>
       <div className="circle-1"></div>
       <div className="circle-2"></div>
       <div className="flex flex-col md:gap-[3rem] md:px-[11.25rem] px-[0.94rem]">
-        <h2 className="heading-1">TOP DESTINATIONS</h2>
-        <div className="grid md:grid-cols-12 md:grid-rows-2 md:gap-[2rem] grid-cols-2 grid-rows-5 gap-[1rem]">
+        <h2 className="heading-1 relative z-10">TOP DESTINATIONS</h2>
+        <div className="grid md:grid-cols-12 md:grid-rows-2 md:gap-[2rem] grid-cols-2 grid-rows-5 gap-[1rem] relative z-10">
           <Destination_item
             className={
               "col-start-1 md:col-end-6 col-end-3 row-start-1 row-end-2"
@@ -70,7 +71,7 @@ function Destination() {
         <div className="flex-1 md:absolute md:pl-[11.25rem] max-md:mb-[1.5rem] max-md:gap-[1rem]">
           <div className="md:w-[40%] flex flex-col md:gap-[1.5rem]  max-md:gap-[1rem]">
             <h2 className="heading-1">ABOUT US</h2>
-            <p className="line-clamp-[7] overflow-hidden text-ellipsis text-[#fff] text-[1rem] tracking-[0.005rem]">
+            <p className="line-clamp-[7] overflow-hidden text-ellipsis font-poppin text-[#fff] text-[1rem] tracking-[0.005rem]">
               If you are planning travel for a vacation in Vietnam with your
               family, your friend group, your spouse or with yourself, you might
               need a personalized trip planner. Connek trip shall be helpful for
@@ -91,10 +92,10 @@ function Destination() {
 
           <div className="flex  md:w-[40%] justify-between md:pl-[3rem]">
             <div className="flex flex-col justify-center items-center translate-y-[100%]">
-              <span className="text-[#fff] text-center md:text-[2.375rem] font-bold tracking-[0.00594rem]">
+              <span className="text-[#fff] text-center font-poppin md:text-[2.375rem] font-bold tracking-[0.00594rem]">
                 2500
               </span>
-              <h5 className="text-[#fff] text-center md:text-[1rem] tracking-[0.005rem] md:mb-[1rem]">
+              <h5 className="text-[#fff] text-center font-poppin md:text-[1rem] tracking-[0.005rem] md:mb-[1rem]">
                 Happy guests
               </h5>
               <Image
@@ -106,10 +107,10 @@ function Destination() {
             </div>
 
             <div className="flex flex-col justify-center items-center translate-y-[50%]">
-              <span className="text-[#fff] text-center md:text-[2.375rem] font-bold tracking-[0.00594rem]">
+              <span className="text-[#fff] text-center font-poppin md:text-[2.375rem] font-bold tracking-[0.00594rem]">
                 8125
               </span>
-              <h5 className="text-[#fff] text-center md:text-[1rem] tracking-[0.005rem] md:mb-[1rem]">
+              <h5 className="text-[#fff] text-center font-poppin md:text-[1rem] tracking-[0.005rem] md:mb-[1rem]">
                 Trips se rved
               </h5>
               <Image
@@ -121,7 +122,7 @@ function Destination() {
             </div>
 
             <div className="flex flex-col justify-center items-center">
-              <span className="text-[#fff] text-center md:text-[2.375rem] font-bold tracking-[0.00594rem]">
+              <span className="text-[#fff] text-center font-poppin md:text-[2.375rem] font-bold tracking-[0.00594rem]">
                 5
               </span>
               <Image
@@ -130,7 +131,7 @@ function Destination() {
                 quality={100}
                 className="md:w-[5.75rem] md:h-[1.0625rem]"
               />
-              <h5 className="text-[#fff] text-center md:text-[1rem] tracking-[0.005rem] md:mb-[1rem]">
+              <h5 className="text-[#fff] text-center font-poppin md:text-[1rem] tracking-[0.005rem] md:mb-[1rem]">
                 Tripadvisor rate
               </h5>
               <Image
