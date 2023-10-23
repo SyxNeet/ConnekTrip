@@ -2,12 +2,10 @@
 import Image from "next/image";
 import slide1 from "@/assets/images/bannerSlide1.png";
 import slide2 from "@/assets/images/bannerHome.png";
-import image from "@/assets/images/destination.png";
 import Destination_item from "@/components/common/Destination_item";
 import imgLocation from "@/assets/images/imgLocation.svg";
 import star from "@/assets/images/star.svg";
 import React, { useEffect, useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 
 
@@ -64,7 +62,6 @@ function SlideTour() {
     }
   ];
   const [indexSlide, setIndexSlide] = useState(0);
-  const [select, setSelect] = useState(0);
   const nextRef = useRef()
   const prevRef = useRef()
   useEffect(()=>{
@@ -74,12 +71,7 @@ function SlideTour() {
         document.getElementById('slide').appendChild(listSlide[0])
       })
     }
-    // if(prevRef){
-    //   prevRef?.current.addEventListener('click',()=>{
-    //     const listSlide = document.querySelectorAll('.item')
-    //     document.getElementById('slide').prepend(listSlide[listSlide.length - 1])
-    //   })
-    // }
+    
     const prev = document.getElementById('prev')
     if(prev){
       prev.addEventListener('click',()=> {
@@ -91,18 +83,18 @@ function SlideTour() {
     //  check handleChangeSlide trong container
     let startX 
     document.addEventListener('mousedown',(e)=> {
-      if(e.target.closest('container')){
+      if(e.target.closest('.containerSlide')){
         startX = e.pageX
-        console.log('startX down',startX);
       }
     })
 
     document.addEventListener('mouseup',(e) => {
-      if(e.target.closest('.container')){
+      if(e.target.closest('.containerSlide')){
         let deltaX = e.pageX - startX
         if(deltaX > 0) {
           const listSlide = document.querySelectorAll('.item')
           document.getElementById('slide').appendChild(listSlide[0])
+
         }else if(deltaX < 0){
           const listSlide = document.querySelectorAll('.item')
           document.getElementById('slide').prepend(listSlide[listSlide.length - 1])
@@ -116,7 +108,7 @@ function SlideTour() {
         <div id="slide">
           {
             data?.map((item,index)=> (
-              <Destination_item key={index} imgHeight={'md:h-[28.9rem]'} className={'item'} data={item} />
+              <Destination_item key={index} indexSlide={indexSlide} imgHeight={'md:h-[28.9rem] h-[9.27rem]'} className={'item'} data={item} />
             ))
           }
       </div>

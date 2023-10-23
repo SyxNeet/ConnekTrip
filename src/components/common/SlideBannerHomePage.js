@@ -42,34 +42,7 @@ function SlideBannerHomePage(data) {
                 </span>
               </div>
             <div className="bg-banner z-[1] bottom-[-5%] left-0 right-0 w-full md:h-[14.25rem] h-[4.9375rem]"></div>
-
             </div>
-            {/* <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="absolute z-[1] bottom-[-5%] left-0 right-0 w-full md:h-[14.25rem] h-[4.9375rem]"
-              width="1600"
-              height="228"
-              viewBox="0 0 1600 228"
-              fill="none"
-            >
-              <path
-                d="M0 36.9048C621.444 -12.314 971.788 -12.2892 1600 36.9048V228H0V36.9048Z"
-                fill="url(#paint0_linear_1_1173)"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_1_1173"
-                  x1="800"
-                  y1="228"
-                  x2="800"
-                  y2="36.9049"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#222222" />
-                  <stop offset="1" stop-color="#222222" stop-opacity="0" />
-                </linearGradient>
-              </defs>
-            </svg> */}
           </SwiperSlide>
         ))}
       </Swiper>
