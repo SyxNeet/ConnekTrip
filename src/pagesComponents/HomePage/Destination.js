@@ -6,11 +6,12 @@ import starDes from "@/assets/images/starDes.svg";
 import profile from "@/assets/images/Profile.svg";
 import imgTextDes from "@/assets/images/imgTextDes.png";
 import heart from "@/assets/images/Heart.svg";
-import vector from "@/assets/images/Vector.svg";
+import slide1 from "@/assets/images/bannerSlide1.png";
+import slide2 from "@/assets/images/bannerHome.png";
 
 import union from "@/assets/images/Union.png";
 function Destination() {
-  const data = new Array(12).fill(0);
+  
   return (
     <section className="md:py-[7rem] top_destination relative pt-[4rem]">
       

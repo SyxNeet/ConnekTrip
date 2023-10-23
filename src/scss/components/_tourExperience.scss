@@ -5,7 +5,9 @@
 
 .swiper_tour {
   .swiper-slide:first-child {
-    margin-left: 1.81rem;
+    @media screen and (min-width : 768px) {
+      margin-left: 1.81rem;
+    }
   }
 }
 .item_des_hover {
@@ -29,8 +31,11 @@
     transform: scale(1.2);
   }
   &:hover > .text_tourDes {
+    @media screen and (min-width :768px) {
     opacity: 0;
     visibility: hidden;
+      
+    }
   }
   &:hover > .item_des_hover {
     opacity: 1;

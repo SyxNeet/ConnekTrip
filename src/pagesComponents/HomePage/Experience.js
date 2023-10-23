@@ -255,15 +255,15 @@ function Experience() {
   const progressLength = data[select]?.tours?.length;
 
   return (
-    <section className="bg-[#352e2e] md:pt-[7.5rem] md:pb-[6.87rem]">
+    <section className="bg-[#352e2e] md:pt-[7.5rem] md:pb-[6.87rem] pt-[4.06rem] max-md:pl-[0.94rem] max-md:pb-[4rem]">
       <div className="circle-1 z-[-1] md:w-[72.875rem] md:h-[72.875rem]"></div>
       <div className="circle-1 z-[-1] right-0"></div>
       <h2 className="heading-1 md:mb-[1.5rem] md:pl-[11.25rem]">
         TOURS & EXPERIENCE
       </h2>
-      <div className="flex  items-center">
+      <div className="flex items-center max-md:flex-col">
         {/* ------------------------------------contnet-left- ---------------------------------*/}
-        <div className="md:w-[35.75rem] md:h-[46.4375rem] items-center md:gap-[2rem]  flex flex-col bg-[#222] md:py-[3.31rem] md:pl-[11.25rem] md:pr-[1.75rem]">
+        <div className="max-md:hidden md:w-[35.75rem] md:h-[46.4375rem] items-center md:gap-[2rem]  flex flex-col bg-[#222] md:py-[3.31rem] md:pl-[11.25rem] md:pr-[1.75rem]">
           {/* list tour name */}
           <div className="flex flex-col md:gap-[2rem]">
             {data?.map((item, index) => (
@@ -316,17 +316,16 @@ function Experience() {
 
           {/* button next, pre custom */}
 
-          <div className="">
             {/* button */}
-            <div className="flex md:rounded-[5.0625rem] bg-[#000]">
+            <div className="flex max-md:hidden rounded-[5.0625rem] bg-[#000]">
               {/* pre */}
               <button
-                className="md:px-[0.75rem] md:py-[0.75rem]"
+                className="px-[0.75rem] py-[0.75rem]"
                 onClick={handlePreSlide}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="md:w-[1.5rem] md:h-[1.5rem]"
+                  className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]"
                   viewBox="0 0 24 24"
                   fill="none"
                 >
@@ -347,12 +346,12 @@ function Experience() {
               {/* next */}
 
               <button
-                className="md:px-[0.75rem] md:py-[0.75rem]"
+                className="px-[0.75rem] py-[0.75rem]"
                 onClick={handleNextSlide}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="md:w-[1.5rem] md:h-[1.5rem]"
+                  className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]"
                   viewBox="0 0 24 24"
                   fill="none"
                 >
@@ -371,13 +370,12 @@ function Experience() {
                 </svg>
               </button>
             </div>
-          </div>
 
-          <div className="flex w-full bg-[#000]">
+          <div className="flex max-md:hidden w-full bg-[#000]">
             {data[select]?.tours?.map((item, index) => (
               <div
                 key={index}
-                className={`md:w-[calc(100%/${progressLength ?? 8})] md:h-[0.25rem] ${
+                className={`md:w-[calc(100%/${progressLength ?? 8})] h-[0.25rem] ${
                   index === realIndexProgress ? "bg-[#DDB152]" : ""
                 }`}
               ></div>
@@ -385,11 +383,22 @@ function Experience() {
           </div>
         </div>
 
+        {/* content top mobile */}
+        <div className="md:hidden flex gap-[1.5rem]">
+                
+        </div>
+
         {/* ------------------------------------contnet-right- ---------------------------------*/}
-        <div className="relative swiper_tour flex-1 md:w-[calc(100%-35.75rem)]">
+        <div className="relative swiper_tour flex-1 md:w-[calc(100%-35.75rem)] w-[100%]">
           <Swiper
-            slidesPerView={2.3}
-            spaceBetween={30}
+            slidesPerView={1.3}
+            spaceBetween={16}
+            breakpoints={{
+              768 :{
+                slidesPerView : 2.3,
+                spaceBetween : 30
+              }
+            }}  
             onSlideChange={handleSlideChange}
             loop={true}
             onBeforeInit={(swiper) => {
@@ -405,6 +414,74 @@ function Experience() {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+
+
+        <div className="md:hidden flex gap-[1rem] w-full items-center max-md:pr-[0.94rem]">
+
+          <div className="flex rounded-[5.0625rem] bg-[#000]">
+                {/* pre */}
+                <button
+                  className="px-[0.75rem] py-[0.75rem]"
+                  onClick={handlePreSlide}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M19 12H5"
+                      stroke="#DDB152"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 19L5 12L12 5"
+                      stroke="#DDB152"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                {/* next */}
+
+                <button
+                  className="px-[0.75rem] py-[0.75rem]"
+                  onClick={handleNextSlide}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M5 12H19"
+                      stroke="#DDB152"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 5L19 12L12 19"
+                      stroke="#DDB152"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+          </div>
+          <div className="flex w-full bg-[#000] h-[0.25rem]">
+              {data[select]?.tours?.map((item, index) => (
+                <div
+                  key={index}
+                  className={`md:w-[calc(100%/${progressLength ? progressLength : 8})] h-[0.25rem] ${
+                    index === realIndexProgress ? "bg-[#DDB152]" : ""
+                  }`}
+                ></div>
+              ))}
+          </div>
         </div>
       </div>
     </section>

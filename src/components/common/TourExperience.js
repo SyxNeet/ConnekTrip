@@ -3,18 +3,18 @@ import React from "react";
 
 function TourExperience({ img, text }) {
   return (
-    <div className="tour_experience md:rounded-[1.5rem] md:h-[43.18rem] flex items-end justify-center relative">
+    <div className="tour_experience md:rounded-[1.5rem] rounded-[1rem] md:h-[43.18rem] h-[16.64rem] flex items-end justify-center relative max-md:my-[1rem]">
       <div className="bg-tour absolute inset-0"></div>
       <Image
         src={img}
         alt="img"
         fill
-        className="object-cover md:h-[43.18rem] md:rounded-[1.5rem]"
+        className="object-cover md:h-[43.18rem] h-[16.64rem] rounded-[1rem] md:rounded-[1.5rem]"
       />
       <p className="items-stretch z-1 absolute text_tourDes font-poppin whitespace-nowrap text-[#fff] text-center md:text-[1.25rem] w-full font-bold tracking-[0.000188rem] md:px-[4rem]">
         {text}
       </p>
-      <div className="flex flex-col md:gap-[0.75rem] md:px-[4rem] item_des_hover items-center md:pb-[1.5rem]">
+      <div className="flex flex-col md:gap-[0.75rem] md:px-[4rem] item_des_hover items-center md:pb-[1.5rem] max-md:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="md:w-[5.375rem] md:h-[7.028rem]"
