@@ -239,9 +239,12 @@ function Experience() {
   ];
 
   const [indexSlide, setIndexSlide] = useState(0);
+  const [indexSlide2, setIndexSlide2] = useState(0);
   const [select, setSelect] = useState(0);
   const [realIndexProgress, setRealIndexProgress] = useState(0);
   const swiperRef = useRef();
+  const swiperRef2 = useRef();
+
   const handleNextSlide = () => {
     swiperRef?.current?.slideNext();
   };
@@ -251,6 +254,15 @@ function Experience() {
   const handleSlideChange = (swiper) => {
     setIndexSlide(swiper.realIndex);
     setRealIndexProgress(swiper.realIndex);
+  };
+  const handleNextSlide2 = () => {
+    swiperRef2?.current?.slideNext();
+  };
+  const handlePreSlide2 = () => {
+    swiperRef2?.current?.slidePrev();
+  };
+  const handleSlideChange2 = (swiper) => {
+    setIndexSlide2(swiper.realIndex);
   };
   const progressLength = data[select]?.tours?.length;
 
@@ -270,9 +282,8 @@ function Experience() {
               // click text-> xanh
               <h3
                 key={index}
-                className={`md:text-[0.875rem]  tracking-[0.00219rem] font-mons text-center items-stretch  cursor-pointer ${
-                  index === select ? "text-[#5CC4BB]" : "text-[#fff]"
-                }`}
+                className={`md:text-[0.875rem]  tracking-[0.00219rem] font-mons text-center items-stretch  cursor-pointer ${index === select ? "text-[#5CC4BB]" : "text-[#fff]"
+                  }`}
                 onClick={() => setSelect(index)}
               >
                 {item?.name}
@@ -316,76 +327,112 @@ function Experience() {
 
           {/* button next, pre custom */}
 
-            {/* button */}
-            <div className="flex max-md:hidden rounded-[5.0625rem] bg-[#000]">
-              {/* pre */}
-              <button
-                className="px-[0.75rem] py-[0.75rem]"
-                onClick={handlePreSlide}
+          {/* button */}
+          <div className="flex max-md:hidden rounded-[5.0625rem] bg-[#000]">
+            {/* pre */}
+            <button
+              className="px-[0.75rem] py-[0.75rem]"
+              onClick={handlePreSlide}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]"
+                viewBox="0 0 24 24"
+                fill="none"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M19 12H5"
-                    stroke="#DDB152"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M12 19L5 12L12 5"
-                    stroke="#DDB152"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              {/* next */}
+                <path
+                  d="M19 12H5"
+                  stroke="#DDB152"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 19L5 12L12 5"
+                  stroke="#DDB152"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            {/* next */}
 
-              <button
-                className="px-[0.75rem] py-[0.75rem]"
-                onClick={handleNextSlide}
+            <button
+              className="px-[0.75rem] py-[0.75rem]"
+              onClick={handleNextSlide}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]"
+                viewBox="0 0 24 24"
+                fill="none"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M5 12H19"
-                    stroke="#DDB152"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M12 5L19 12L12 19"
-                    stroke="#DDB152"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
+                <path
+                  d="M5 12H19"
+                  stroke="#DDB152"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 5L19 12L12 19"
+                  stroke="#DDB152"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
 
           <div className="flex max-md:hidden w-full bg-[#000]">
             {data[select]?.tours?.map((item, index) => (
               <div
                 key={index}
-                className={`md:w-[calc(100%/${progressLength ?? 8})] h-[0.25rem] ${
-                  index === realIndexProgress ? "bg-[#DDB152]" : ""
-                }`}
+                className={`md:w-[calc(100%/${progressLength ?? 8})] h-[0.25rem] ${index === realIndexProgress ? "bg-[#DDB152]" : ""
+                  }`}
               ></div>
             ))}
           </div>
         </div>
 
         {/* content top mobile */}
-        <div className="md:hidden flex gap-[1.5rem]">
-                
+        <div className="md:hidden swiper_ex flex gap-[1.5rem] w-[100%] px-[0.94rem] items-center">
+          <div onClick={handlePreSlide2} className="w-[2.5rem] h-[2.5rem] rounded-[50%] flex justify-center items-center relative">
+            <div className="absolute inset-0 bg-[#fff] bg-opacity-[0.25] backdrop-blur-[4px]"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-[1rem] h-[1rem] relative z-[1]" viewBox="0 0 16 16" fill="none">
+              <path d="M10 12L6 8L10 4" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={0}
+            onSlideChange={handleSlideChange2}
+            loop={true}
+            onBeforeInit={(swiper) => {
+              if (swiperRef2) {
+                swiperRef2.current = swiper;
+              }
+            }}
+            className="!w-full "
+          >
+            {data?.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <h3
+                    key={index}
+                    className={`text-[0.875rem] tracking-[0.00219rem] font-mons text-center items-stretch font-bold cursor-pointer ${index === indexSlide2 ? "text-[#5CC4BB]" : "text-[#fff]"
+                      }`}
+                  >
+                    {item?.name}
+                  </h3>
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
+          <button onClick={handleNextSlide2} className="w-[2.5rem] h-[2.5rem] rounded-[50%] flex justify-center items-center relative">
+            <div className="absolute inset-0 bg-[#fff] bg-opacity-[0.25] backdrop-blur-[4px]"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-[1rem] h-[1rem] relative z-[1]" viewBox="0 0 16 16" fill="none">
+              <path d="M6 12L10 8L6 4" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
         </div>
 
         {/* ------------------------------------contnet-right- ---------------------------------*/}
@@ -394,11 +441,11 @@ function Experience() {
             slidesPerView={1.3}
             spaceBetween={16}
             breakpoints={{
-              768 :{
-                slidesPerView : 2.3,
-                spaceBetween : 30
+              768: {
+                slidesPerView: 2.3,
+                spaceBetween: 30
               }
-            }}  
+            }}
             onSlideChange={handleSlideChange}
             loop={true}
             onBeforeInit={(swiper) => {
@@ -408,7 +455,7 @@ function Experience() {
             }}
             className="!w-full"
           >
-            {data[select]?.tours?.map((item, index) => (
+            {data[select || indexSlide2]?.tours?.map((item, index) => (
               <SwiperSlide key={index}>
                 <TourExperience img={item?.image?.src} text={item?.text} />
               </SwiperSlide>
@@ -420,67 +467,66 @@ function Experience() {
         <div className="md:hidden flex gap-[1rem] w-full items-center max-md:pr-[0.94rem]">
 
           <div className="flex rounded-[5.0625rem] bg-[#000]">
-                {/* pre */}
-                <button
-                  className="px-[0.75rem] py-[0.75rem]"
-                  onClick={handlePreSlide}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M19 12H5"
-                      stroke="#DDB152"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M12 19L5 12L12 5"
-                      stroke="#DDB152"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                {/* next */}
+            {/* pre */}
+            <button
+              className="px-[0.75rem] py-[0.75rem]"
+              onClick={handlePreSlide}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M19 12H5"
+                  stroke="#DDB152"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 19L5 12L12 5"
+                  stroke="#DDB152"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            {/* next */}
 
-                <button
-                  className="px-[0.75rem] py-[0.75rem]"
-                  onClick={handleNextSlide}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M5 12H19"
-                      stroke="#DDB152"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M12 5L19 12L12 19"
-                      stroke="#DDB152"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
+            <button
+              className="px-[0.75rem] py-[0.75rem]"
+              onClick={handleNextSlide}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M5 12H19"
+                  stroke="#DDB152"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 5L19 12L12 19"
+                  stroke="#DDB152"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
           </div>
           <div className="flex w-full bg-[#000] h-[0.25rem]">
-              {data[select]?.tours?.map((item, index) => (
-                <div
-                  key={index}
-                  className={`md:w-[calc(100%/${progressLength ? progressLength : 8})] h-[0.25rem] ${
-                    index === realIndexProgress ? "bg-[#DDB152]" : ""
+            {data[select]?.tours?.map((item, index) => (
+              <div
+                key={index}
+                className={`w-[calc(100%_/_${progressLength ? progressLength : 8})] h-[0.25rem] ${index === realIndexProgress ? "bg-[#DDB152]" : ""
                   }`}
-                ></div>
-              ))}
+              ></div>
+            ))}
           </div>
         </div>
       </div>
