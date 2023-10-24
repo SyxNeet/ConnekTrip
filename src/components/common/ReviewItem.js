@@ -16,7 +16,7 @@ function ReviewItem({className}) {
                     ))}
                 </div>
             </div>
-            <p className='items-stretch md:text-[1rem] leading-[1.48] text-[#fff] tracking-[0.01rem] text-[0.875rem] font-mons max-md:tracking-[0.00219rem]  xxl:line-clamp-3 text-ellipsis line-clamp-2'>
+            <p className='items-stretch md:text-[1rem] text-[#fff] tracking-[0.01rem] text-[0.875rem] font-mons max-md:tracking-[0.00219rem]  xxl:line-clamp-3 text-ellipsis line-clamp-2'>
             Amet minim mollit non deserunt ullamco est sit aliqua ullamco est sit aliqua ullamco est sit aliqua 
             </p>
 

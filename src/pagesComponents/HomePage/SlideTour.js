@@ -65,13 +65,16 @@ function SlideTour() {
   const nextRef = useRef()
   const prevRef = useRef()
   useEffect(()=>{
+    setInterval(()=> {
+       const listSlide = document.querySelectorAll('.item')
+        document.getElementById('slide').appendChild(listSlide[0])
+    },5000)
     if(nextRef){
       nextRef?.current.addEventListener('click',()=>{
         const listSlide = document.querySelectorAll('.item')
         document.getElementById('slide').appendChild(listSlide[0])
       })
     }
-    
     const prev = document.getElementById('prev')
     if(prev){
       prev.addEventListener('click',()=> {
