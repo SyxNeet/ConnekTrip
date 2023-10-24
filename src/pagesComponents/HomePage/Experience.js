@@ -443,7 +443,7 @@ function Experience() {
             breakpoints={{
               768: {
                 slidesPerView: 2.3,
-                spaceBetween: 30
+                spaceBetween: 32
               }
             }}
             onSlideChange={handleSlideChange}
