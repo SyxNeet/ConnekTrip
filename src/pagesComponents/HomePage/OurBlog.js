@@ -5,7 +5,7 @@ import React from 'react'
 function OurBlog() {
     const arrBlog = new Array(5).fill(0)
   return (
-    <section className='flex flex-col gap-[1.5rem]  md:px-[11.31rem] px-[0.94rem] md:h-[100vh] max-md:py-[4rem] bg-[#222] relative'>
+    <section className='flex flex-col gap-[1.5rem]  md:px-[11.31rem] px-[0.94rem] max-md:py-[4rem] bg-[#222] relative'>
         <div className='circle-1 right-0 !block top-[-10%] max-md:!hidden'></div>
         <div className='flex justify-between relative z-10'>
             <h2 className='heading-1'>
