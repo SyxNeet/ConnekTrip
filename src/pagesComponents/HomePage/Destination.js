@@ -1,60 +1,77 @@
+'use client'
 import Button from "@/components/common/Button";
 import Destination_item from "@/components/common/Destination_item";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import starDes from "@/assets/images/starDes.svg";
 import profile from "@/assets/images/Profile.svg";
 import imgTextDes from "@/assets/images/imgTextDes.png";
 import heart from "@/assets/images/Heart.svg";
-import slide1 from "@/assets/images/bannerSlide1.png";
-import slide2 from "@/assets/images/bannerHome.png";
-
+import Aos from "aos";
 import union from "@/assets/images/Union.png";
 function Destination() {
-  
+  useEffect(() => {
+    Aos.init();
+    Aos.refresh();
+  }, []);
   return (
     <section className="md:py-[7rem] top_destination relative pt-[4rem]">
-      
       <div className="circle-1"></div>
       <div className="circle-1"></div>
       <div className="circle-1"></div>
       <div className="circle-2"></div>
       <div className="flex flex-col md:gap-[3rem] md:px-[11.25rem] px-[0.94rem]">
-        <h2 className="heading-1 relative z-10">TOP DESTINATIONS</h2>
+        <h2  
+          data-aos-disabled="true"
+          data-aos-once="true"
+          data-aos="fade-up"
+          data-aos-duration="1000"           
+          className="heading-1 relative z-10">TOP DESTINATIONS</h2>
         <div className="grid md:grid-cols-12 md:grid-rows-2 md:gap-[2rem] grid-cols-2 grid-rows-5 gap-[1rem] relative z-10">
           <Destination_item
             className={
-              "col-start-1 md:col-end-6 col-end-3 row-start-1 row-end-2"
+              "col-start-1 md:col-end-6 col-end-3 row-start-1 row-end-2 tourItemHover "
             }
+            className2={'textTourItem'}
             imgHeight={"md:h-[21.875rem] h-[11.2rem]"}
           />
           <Destination_item
+            className2={'textTourItem'}
+
             className={
-              "md:col-start-6 md:col-end-10 md:row-start-1 row-end-3 col-start-1 col-end-2 row-start-2"
+              "md:col-start-6 md:col-end-10 md:row-start-1 row-end-3 col-start-1 col-end-2 row-start-2  tourItemHover"
             }
             imgHeight={"md:h-[45.8125rem] "}
           />
           <Destination_item
+            className2={'textTourItem'}
+
             className={
-              "md:col-start-10 md:col-end-13 col-start-2 col-end-3 md:row-start-1 row-start-2 row-end-3 md:row-end-2"
+              "md:col-start-10 md:col-end-13 col-start-2 col-end-3 md:row-start-1 row-start-2 row-end-3 md:row-end-2  tourItemHover"
             }
             imgHeight={"md:h-[21.875rem]"}
           />
           <Destination_item
+            className2={'textTourItem'}
+
             className={
-              "col-start-1 md:col-end-4 col-end-3 md:row-start-2 row-start-3 row-end-5"
+              "col-start-1 md:col-end-4 col-end-3 md:row-start-2 row-start-3 row-end-5  tourItemHover"
             }
             imgHeight={"md:h-[21.875rem]"}
           />
           <Destination_item
+            className2={'textTourItem'}
+
             className={
-              "md:col-start-4 col-start-1 md:col-end-6 col-end-2 md:row-start-2 row-start-5 md:row-end-3"
+              "md:col-start-4 col-start-1 md:col-end-6 col-end-2 md:row-start-2 row-start-5 md:row-end-3  tourItemHover"
             }
             imgHeight={"md:h-[21.875rem]"}
           />
           <Destination_item
+            className2={'textTourItem'}
+
             className={
-              "md:col-start-10 col-start-2 md:col-end-13 md:row-start-2 row-start-5 md:row-end-3"
+              "md:col-start-10 col-start-2 md:col-end-13 md:row-start-2 row-start-5 md:row-end-3  tourItemHover"
             }
             imgHeight={"md:h-[21.875rem]"}
           />

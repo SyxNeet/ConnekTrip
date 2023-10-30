@@ -9,7 +9,7 @@ import whatsapp from '@/assets/images/whatapp.svg'
 function Footer() {
   const data = [fb,inst,tiktok,whatsapp]
   return (
-    <section className='md:h-[100vh] h-[27rem] relative'>
+    <section className='md:h-[100vh] bg-[#222] h-[27rem] relative'>
       <div className='bg-footer z-[-1]'></div>
       <Image src={img} alt='footer' quality={100} fill className='w-full h-full z-0 object-cover' />
       <div className='flex flex-col mobile_custom relative z-10 pt-[3.81rem] md:px-[23.5rem] px-[0.94rem]  items-center '>
@@ -93,7 +93,7 @@ function Footer() {
             <div className='flex md:gap-[2rem] gap-[1rem] items-center'>
                 {
                   data?.map((item,index)=>(
-                    <Image key={index} src={item} quality={100} className='md:w-[3rem] md:h-[3rem] w-[1rem] h-[1rem]' />
+                    <Image key={index} src={item} quality={100} className='md:w-[3rem] md:h-[3rem] w-[1rem] h-[1rem] cursor-pointer' />
                   ))
                 }
             </div>

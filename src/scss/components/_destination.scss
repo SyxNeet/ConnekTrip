@@ -43,3 +43,23 @@
   top: 0;
 }
 
+.slideItem.tourItemHover{
+  overflow: hidden;
+
+}
+.slideItem.tourItemHover > img {
+  transition: all 0.3s;
+}
+.slideItem.tourItemHover:hover > img {
+  transform: scale(1.2);
+}
+.slideItem.tourItemHover:hover .textTourItem{
+    color: yellow;
+    background-size: 100% 2px;
+    background-position-x: left;
+}
+.textTourItem {
+  position: relative;
+    transition: background-size 350ms;
+    background: linear-gradient(0deg, yellow, yellow) no-repeat right bottom/0 1px;
+}

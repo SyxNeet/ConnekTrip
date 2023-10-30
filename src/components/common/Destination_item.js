@@ -5,7 +5,7 @@ import imgLocation from "@/assets/images/imgLocation.svg";
 import star from "@/assets/images/star.svg";
 import Image from "next/image";
 import Button from "./Button";
-function Destination_item({ indexSlide,imgHeight,data, className, index }) {
+function Destination_item({ indexSlide,imgHeight,data, className, index,className2 }) {
   const arrStar = new Array(5).fill(star);
   return (
     <div
@@ -81,8 +81,8 @@ function Destination_item({ indexSlide,imgHeight,data, className, index }) {
         </div>
 
         <div>
-          <span className="text-[#fff] md:text-[1.5rem] text-[0.875rem] font-poppin font-bold leading-[1.5625rem] tracking-[0.015rem]">
-            {data?.text || 'Hoa Lu ancient capital Ninh Binh'}
+          <span className={`text-[#fff] md:text-[1.5rem] cursor-pointer  text-ellipsis  text-[0.875rem] font-poppin font-bold leading-[1.8625rem] tracking-[0.015rem] ${className2}`}>
+            {data?.text || 'Hoa Lu Ninh Binh'}
           </span>
         </div>
         <div className="price  md:gap-[0.5rem] md:w-[31rem] hidden justify-between items-center">
