@@ -386,7 +386,7 @@ function Experience() {
             {data[select]?.tours?.map((item, index) => (
               <div
                 key={index}
-                className={`md:w-[calc(100%/${progressLength ?? 8})] h-[0.25rem] ${index === realIndexProgress ? "bg-[#DDB152]" : ""
+                className={`widthCustom md:w-[calc(100%/${progressLength ?? 8})] h-[0.25rem] ${index === realIndexProgress ? "bg-[#DDB152]" : ""
                   }`}
               ></div>
             ))}
@@ -523,7 +523,7 @@ function Experience() {
             {data[select]?.tours?.map((item, index) => (
               <div
                 key={index}
-                className={`w-[calc(100%_/_${progressLength ? progressLength : 8})] h-[0.25rem] ${index === realIndexProgress ? "bg-[#DDB152]" : ""
+                className={` w-[calc(100%_/_${progressLength ? progressLength : 8})] h-[0.25rem] ${index === realIndexProgress ? "bg-[#DDB152]" : ""
                   }`}
               ></div>
             ))}

@@ -29,9 +29,20 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+  & > img {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s;
+  }
 }
 .discoveryBlock:hover .discoveryAb::after {
   transform: translate(-50%, -50%) rotate(0deg);
+}
+.discoveryBlock:hover .discoveryAb > img {
+  top: 100%;
 }
 
 .menu-mobile {

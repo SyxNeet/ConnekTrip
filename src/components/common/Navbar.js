@@ -51,7 +51,6 @@ function Navbar() {
       name: "Contact",
     },
   ];
-
   const mbMenuRef = useRef();
   const handleOpen = () => {
     mbMenuRef?.current?.classList.add("active");

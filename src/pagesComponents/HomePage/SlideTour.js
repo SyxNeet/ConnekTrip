@@ -65,7 +65,7 @@ function SlideTour() {
   const nextRef = useRef()
   const prevRef = useRef()
   useEffect(()=>{
-    setInterval(()=> {
+    const intervalId = setInterval(()=> {
        const listSlide = document.querySelectorAll('.item')
         document.getElementById('slide').appendChild(listSlide[0])
     },5000)
@@ -97,7 +97,6 @@ function SlideTour() {
         if(deltaX > 0) {
           const listSlide = document.querySelectorAll('.item')
           document.getElementById('slide').appendChild(listSlide[0])
-
         }else if(deltaX < 0){
           const listSlide = document.querySelectorAll('.item')
           document.getElementById('slide').prepend(listSlide[listSlide.length - 1])
